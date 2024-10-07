@@ -11,7 +11,7 @@ const errorHandler = require("./middleware/errorHandler");
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://kasperinfotech.in",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   },
@@ -93,7 +93,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://kasperinfotech.in"],
+    origin: ["http://localhost:3000"],
     credentials: true,
   })
 );
